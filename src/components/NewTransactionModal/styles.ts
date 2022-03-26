@@ -24,6 +24,11 @@ export const Container = styled.form`
     &::placeholder {
       color: var(--text-body);
     }
+
+    & + input {
+      margin-top: 1rem;
+    }
+
   }
 
   button[type="submit"] {
