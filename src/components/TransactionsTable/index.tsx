@@ -18,7 +18,7 @@ export function TransactionTable(){
   useEffect(()=>{
     api.get('transactions')
     .then(response => setTransactions(response.data.transactions))
-  },[])
+  },[]);
 
   return(
     <Container>
@@ -51,6 +51,7 @@ export function TransactionTable(){
                 <td>{new Intl.DateTimeFormat('pt-BR').format(
                   new Date(transaction.createdAt)
                 )}</td>
+
               </tr>
             );
           })}
